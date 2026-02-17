@@ -29,70 +29,70 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen min-h-[900px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/30 z-10"></div>
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552422535-c45813c61732?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center parallax"></div>
         </div>
         
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto text-white">
-          <p className="text-sm md:text-base tracking-[0.3em] uppercase mb-8 font-light text-[#D4AF37] animate-fade-in-up">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto text-white">
+          <p className="text-sm md:text-lg tracking-[0.4em] uppercase mb-10 font-light text-[#D4AF37] animate-fade-in-up">
             Premium Music Education
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin mb-10 leading-tight tracking-tight font-serif italic">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-thin mb-12 leading-tight tracking-tight font-serif italic">
             Discover the <br/>
             <span className="not-italic font-normal">Art of Piano</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-xl mx-auto font-light leading-relaxed font-sans">
-            음악이 주는 깊은 울림을 경험하세요.<br/>
-            기초부터 전공까지, 당신만을 위한 프라이빗 레슨.
+          <p className="text-xl md:text-2xl text-gray-200 mb-16 max-w-2xl mx-auto font-light leading-relaxed font-sans">
+            음악이 주는 깊은 울림을 경험하세요.<br className="hidden md:block"/>
+            기초부터 전공까지, 당신만을 위한 <span className="font-normal text-white">프라이빗 레슨</span>.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-10 py-4 bg-[#D4AF37] hover:bg-[#C5A028] text-white font-sans text-sm tracking-widest uppercase transition-all shadow-xl shadow-[#D4AF37]/20 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <button className="px-12 py-5 bg-[#D4AF37] hover:bg-[#C5A028] text-white font-sans text-sm tracking-[0.2em] uppercase transition-all shadow-xl shadow-[#D4AF37]/20 transform hover:scale-105 hover:-translate-y-1">
               Start Your Journey
             </button>
-            <button className="px-10 py-4 border border-white hover:bg-white hover:text-[#1C1C1C] text-white font-sans text-sm tracking-widest uppercase transition-all backdrop-blur-sm">
+            <button className="px-12 py-5 border border-white hover:bg-white hover:text-[#1C1C1C] text-white font-sans text-sm tracking-[0.2em] uppercase transition-all backdrop-blur-sm">
               View Curriculum
             </button>
           </div>
         </div>
         
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50 animate-pulse">
-          <div className="w-[1px] h-24 bg-gradient-to-b from-transparent via-white to-transparent"></div>
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/50 animate-pulse hidden md:block">
+          <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-white to-transparent"></div>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section id="about" className="py-32 bg-[#FDFBF7]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <section id="about" className="py-32 md:py-48 bg-[#FDFBF7]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32 items-center">
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop" alt="Piano Playing" className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" />
+                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop" alt="Piano Playing" className="object-cover w-full h-full hover:scale-105 transition-transform duration-[1.5s] grayscale hover:grayscale-0" />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#1C1C1C] text-white p-8 flex flex-col justify-center items-center text-center">
-                <span className="text-4xl font-light mb-2">15+</span>
-                <span className="text-xs uppercase tracking-widest text-gray-400">Years of<br/>Experience</span>
+              <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-[#1C1C1C] text-white p-10 flex flex-col justify-center items-center text-center shadow-2xl hidden md:flex">
+                <span className="text-5xl font-thin mb-3 font-serif italic">15+</span>
+                <span className="text-xs uppercase tracking-[0.2em] text-gray-400 font-light">Years of<br/>Experience</span>
               </div>
             </div>
             
-            <div className="space-y-10">
+            <div className="space-y-12 md:pl-10">
               <div>
-                <span className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-4 block">Our Philosophy</span>
-                <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+                <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-6 block">Our Philosophy</span>
+                <h2 className="text-5xl md:text-6xl font-light leading-tight mb-10 font-serif">
                   Music is the <br/>
-                  Language of the Soul
+                  <span className="italic text-gray-400">Language</span> of the Soul
                 </h2>
-                <div className="w-16 h-[1px] bg-[#1C1C1C] mb-8"></div>
-                <p className="text-gray-600 leading-loose font-sans font-light text-lg">
-                  단순히 악보를 읽고 건반을 누르는 기술이 아닌, <br/>
-                  음악을 통해 감정을 표현하고 소통하는 법을 가르칩니다. <br/>
-                  한 사람 한 사람의 속도에 맞춘 따뜻한 지도로 <br/>
+                <div className="w-24 h-[1px] bg-[#1C1C1C] mb-10"></div>
+                <p className="text-gray-600 leading-loose font-sans font-light text-lg md:text-xl">
+                  단순히 악보를 읽고 건반을 누르는 기술이 아닌, <br className="hidden lg:block"/>
+                  음악을 통해 감정을 표현하고 소통하는 법을 가르칩니다. <br className="hidden lg:block"/>
+                  한 사람 한 사람의 속도에 맞춘 따뜻한 지도로 <br className="hidden lg:block"/>
                   평생의 친구가 될 음악을 선물합니다.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-8 font-sans">
+              <div className="grid grid-cols-2 gap-10 font-sans border-t border-gray-200 pt-10">
                 <div>
                   <h3 className="font-bold text-lg mb-2 flex items-center gap-2"><Star size={16} className="text-[#D4AF37]"/> 1:1 Customized</h3>
                   <p className="text-sm text-gray-500 font-light">개인별 맞춤 커리큘럼</p>
