@@ -1,105 +1,93 @@
 
 import React from 'react';
-import { Music, PlayCircle, Star, Calendar, MapPin, Phone, Instagram } from 'lucide-react';
+import { Play, Music2, Star, ChevronRight, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FDFBF7] font-serif text-[#1C1C1C] selection:bg-[#D4AF37] selection:text-white">
+    <div className="min-h-screen bg-[#FDFBF7] text-[#1C1C1C] font-sans selection:bg-[#D4AF37] selection:text-white">
       {/* Navbar */}
-      <nav className="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EAEaea]">
+      <nav className="fixed w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-md border-b border-[#E5E5E5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 border border-[#1C1C1C] rounded-full flex items-center justify-center">
-                <Music size={14} strokeWidth={1.5} />
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 border border-[#1C1C1C] rounded-full flex items-center justify-center">
+                <Music2 size={18} strokeWidth={1} />
               </div>
-              <span className="text-xl tracking-widest uppercase font-light">Melody Piano</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-serif tracking-wider uppercase">Melody</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37]">Piano Studio</span>
+              </div>
             </div>
-            <div className="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-light text-gray-500">
-              <a href="#about" className="hover:text-[#D4AF37] transition-colors">About</a>
+            <div className="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em] font-medium text-gray-500">
+              <a href="#philosophy" className="hover:text-[#D4AF37] transition-colors">Philosophy</a>
               <a href="#lessons" className="hover:text-[#D4AF37] transition-colors">Lessons</a>
               <a href="#teachers" className="hover:text-[#D4AF37] transition-colors">Teachers</a>
               <a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a>
             </div>
-            <button className="hidden md:block px-6 py-2 border border-[#1C1C1C] hover:bg-[#1C1C1C] hover:text-white transition-colors text-xs uppercase tracking-widest">
-              Book a Lesson
+            <button className="hidden md:block border border-[#1C1C1C] px-8 py-3 text-xs uppercase tracking-[0.2em] hover:bg-[#1C1C1C] hover:text-white transition-colors duration-500">
+              Inquiry
             </button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[900px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/40 z-10"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552422535-c45813c61732?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center parallax"></div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/30 z-10"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552422535-c45813c61732?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center parallax scale-105"></div>
         </div>
         
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto text-white">
-          <p className="text-sm md:text-lg tracking-[0.4em] uppercase mb-10 font-light text-[#D4AF37] animate-fade-in-up">
+        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto text-white">
+          <p className="text-xs md:text-sm tracking-[0.5em] uppercase mb-8 font-light text-[#D4AF37] animate-fade-in-up">
             Premium Music Education
           </p>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-thin mb-12 leading-tight tracking-tight font-serif italic">
-            Discover the <br/>
-            <span className="not-italic font-normal">Art of Piano</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-thin mb-12 leading-none font-serif italic tracking-tight">
+            The Art of <br/>
+            <span className="not-italic font-light">Resonance</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-16 max-w-2xl mx-auto font-light leading-relaxed font-sans">
-            음악이 주는 깊은 울림을 경험하세요.<br className="hidden md:block"/>
-            기초부터 전공까지, 당신만을 위한 <span className="font-normal text-white">프라이빗 레슨</span>.
+          <p className="text-lg md:text-xl text-gray-200 mb-16 font-light leading-relaxed max-w-lg mx-auto border-t border-white/20 pt-8 mt-8">
+            깊이 있는 울림, 섬세한 터치.<br/>
+            당신의 일상에 음악이라는 우아함을 더해드립니다.
           </p>
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-            <button className="px-12 py-5 bg-[#D4AF37] hover:bg-[#C5A028] text-white font-sans text-sm tracking-[0.2em] uppercase transition-all shadow-xl shadow-[#D4AF37]/20 transform hover:scale-105 hover:-translate-y-1">
-              Start Your Journey
-            </button>
-            <button className="px-12 py-5 border border-white hover:bg-white hover:text-[#1C1C1C] text-white font-sans text-sm tracking-[0.2em] uppercase transition-all backdrop-blur-sm">
-              View Curriculum
-            </button>
-          </div>
-        </div>
-        
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/50 animate-pulse hidden md:block">
-          <div className="w-[1px] h-32 bg-gradient-to-b from-transparent via-white to-transparent"></div>
+          <button className="group flex items-center gap-4 mx-auto text-sm uppercase tracking-[0.3em] hover:text-[#D4AF37] transition-colors">
+            <div className="w-12 h-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-[#D4AF37] transition-colors">
+              <ArrowRight size={16} />
+            </div>
+            View Curriculum
+          </button>
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section id="about" className="py-32 md:py-48 bg-[#FDFBF7]">
+      {/* Philosophy */}
+      <section id="philosophy" className="py-32 bg-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
             <div className="relative">
-              <div className="aspect-[3/4] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop" alt="Piano Playing" className="object-cover w-full h-full hover:scale-105 transition-transform duration-[1.5s] grayscale hover:grayscale-0" />
-              </div>
-              <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-[#1C1C1C] text-white p-10 flex flex-col justify-center items-center text-center shadow-2xl hidden md:flex">
-                <span className="text-5xl font-thin mb-3 font-serif italic">15+</span>
-                <span className="text-xs uppercase tracking-[0.2em] text-gray-400 font-light">Years of<br/>Experience</span>
+              <div className="absolute -top-4 -left-4 w-full h-full border border-[#D4AF37] z-0"></div>
+              <div className="aspect-[4/5] overflow-hidden relative z-10">
+                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop" className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" />
               </div>
             </div>
-            
-            <div className="space-y-12 md:pl-10">
-              <div>
-                <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-6 block">Our Philosophy</span>
-                <h2 className="text-5xl md:text-6xl font-light leading-tight mb-10 font-serif">
-                  Music is the <br/>
-                  <span className="italic text-gray-400">Language</span> of the Soul
-                </h2>
-                <div className="w-24 h-[1px] bg-[#1C1C1C] mb-10"></div>
-                <p className="text-gray-600 leading-loose font-sans font-light text-lg md:text-xl">
-                  단순히 악보를 읽고 건반을 누르는 기술이 아닌, <br className="hidden lg:block"/>
-                  음악을 통해 감정을 표현하고 소통하는 법을 가르칩니다. <br className="hidden lg:block"/>
-                  한 사람 한 사람의 속도에 맞춘 따뜻한 지도로 <br className="hidden lg:block"/>
-                  평생의 친구가 될 음악을 선물합니다.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-10 font-sans border-t border-gray-200 pt-10">
+            <div className="space-y-10">
+              <h2 className="text-5xl md:text-6xl font-serif font-light leading-tight">
+                Music is the <br/>
+                <span className="italic text-[#D4AF37]">Language</span> of<br/>
+                the Soul.
+              </h2>
+              <div className="w-12 h-[1px] bg-[#1C1C1C]"></div>
+              <p className="text-gray-500 leading-loose font-light text-lg">
+                멜로디 피아노는 단순한 기능 습득을 넘어 음악을 통한 소통과 치유를 지향합니다.
+                1:1 개인별 맞춤 커리큘럼으로 기초부터 탄탄하게, 그리고 즐겁게 음악을 향유할 수 있도록 지도합니다.
+              </p>
+              <div className="grid grid-cols-2 gap-8 pt-8">
                 <div>
-                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2"><Star size={16} className="text-[#D4AF37]"/> 1:1 Customized</h3>
-                  <p className="text-sm text-gray-500 font-light">개인별 맞춤 커리큘럼</p>
+                  <h3 className="font-serif text-2xl mb-2">15+</h3>
+                  <p className="text-xs uppercase tracking-widest text-gray-400">Years Experience</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2"><Star size={16} className="text-[#D4AF37]"/> Premium Facility</h3>
-                  <p className="text-sm text-gray-500 font-light">야마하 그랜드 피아노 완비</p>
+                  <h3 className="font-serif text-2xl mb-2">100%</h3>
+                  <p className="text-xs uppercase tracking-widest text-gray-400">University Acceptance</p>
                 </div>
               </div>
             </div>
@@ -107,132 +95,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lessons Section */}
-      <section id="lessons" className="py-32 bg-white text-center">
+      {/* Lessons Cards */}
+      <section id="lessons" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-gray-400 text-xs font-bold tracking-widest uppercase mb-4 block">Curriculum</span>
-          <h2 className="text-3xl md:text-4xl font-light mb-20">Choose Your Class</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-b border-gray-100 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+          <div className="text-center mb-24">
+            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">Our Classes</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-light mt-4">Curriculum</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-100 divide-y md:divide-y-0 md:divide-x divide-gray-100">
             {[
-              { title: "Hobby Class", subtitle: "취미반", desc: "좋아하는 곡을 연주하며 힐링하는 시간", time: "Weekly 2 Sessions" },
-              { title: "Kids Class", subtitle: "영재반", desc: "음악적 감수성과 기초를 탄탄하게", time: "Weekly 3 Sessions" },
-              { title: "Master Class", subtitle: "전공/입시반", desc: "예중, 예고, 음대 입시 완벽 대비", time: "Intensive Course" },
-            ].map((cls, idx) => (
-              <div key={idx} className="group p-12 hover:bg-[#FDFBF7] transition-colors cursor-pointer relative">
-                <div className="mb-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500 transform group-hover:-translate-y-2">
-                  <Music size={32} className="mx-auto text-[#D4AF37]" strokeWidth={1} />
+              { title: "Hobby", desc: "취미반", detail: "For Adult & Kids" },
+              { title: "Major", desc: "전공/입시반", detail: "Intensive Care" },
+              { title: "Pro", desc: "전문가반", detail: "Master Class" },
+            ].map((item, idx) => (
+              <div key={idx} className="group p-12 md:p-16 hover:bg-[#FDFBF7] transition-colors cursor-pointer text-center relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                <h3 className="text-3xl font-serif italic mb-4">{item.title}</h3>
+                <p className="text-sm font-bold text-gray-800 mb-2">{item.desc}</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mb-8">{item.detail}</p>
+                <div className="w-8 h-8 rounded-full border border-gray-200 mx-auto flex items-center justify-center group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-colors">
+                  <ChevronRight size={14} />
                 </div>
-                <h3 className="text-2xl font-normal mb-2 font-serif italic">{cls.title}</h3>
-                <p className="text-xs text-[#D4AF37] uppercase tracking-widest mb-6">{cls.subtitle}</p>
-                <p className="text-gray-500 font-sans font-light text-sm leading-relaxed mb-8">{cls.desc}</p>
-                <span className="inline-block border-b border-[#1C1C1C] pb-1 text-xs uppercase tracking-widest group-hover:text-[#D4AF37] group-hover:border-[#D4AF37] transition-colors">
-                  More Details
-                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Video/Performance Section */}
-      <section className="py-32 bg-[#1C1C1C] text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
-             <div>
-               <span className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase mb-4 block">Performance</span>
-               <h2 className="text-3xl md:text-5xl font-light font-serif italic">Student Recitals</h2>
-             </div>
-             <div className="mt-8 md:mt-0 flex gap-4">
-               <button className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors">
-                 <ArrowLeft size={16} />
-               </button>
-               <button className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors">
-                 <ArrowRight size={16} />
-               </button>
-             </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative aspect-video bg-zinc-800 group cursor-pointer overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1574706349692-7f9f3032549d?q=80&w=2072&auto=format&fit=crop" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 scale-105 group-hover:scale-100" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform">
-                  <PlayCircle size={32} className="text-white ml-1" />
-                </div>
-              </div>
-              <div className="absolute bottom-8 left-8">
-                <p className="text-xs uppercase tracking-widest text-[#D4AF37] mb-2">Winter Concert 2023</p>
-                <h3 className="text-2xl font-serif italic">Chopin: Nocturne Op.9 No.2</h3>
-              </div>
-            </div>
-            <div className="relative aspect-video bg-zinc-800 group cursor-pointer overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 scale-105 group-hover:scale-100" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform">
-                   <PlayCircle size={32} className="text-white ml-1" />
-                </div>
-              </div>
-              <div className="absolute bottom-8 left-8">
-                <p className="text-xs uppercase tracking-widest text-[#D4AF37] mb-2">Spring Festival</p>
-                <h3 className="text-2xl font-serif italic">Debussy: Clair de Lune</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer / Contact */}
-      <footer id="contact" className="bg-[#FDFBF7] pt-32 pb-12 border-t border-gray-100 font-sans">
+      {/* Footer */}
+      <footer className="bg-[#1C1C1C] text-white py-20 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <div className="mb-12">
-            <h2 className="text-4xl font-serif italic font-light mb-6">Start Your Musical Journey</h2>
-            <p className="text-gray-500 font-light mb-10">
-              상담은 예약제로 운영됩니다. 편하신 시간에 방문해주세요.
-            </p>
-            <div className="flex justify-center gap-8 text-sm text-gray-800 font-medium uppercase tracking-widest">
-              <div className="flex flex-col items-center gap-3">
-                <Phone size={20} className="text-[#D4AF37]" />
-                <span>02-1234-5678</span>
-              </div>
-              <div className="flex flex-col items-center gap-3">
-                <MapPin size={20} className="text-[#D4AF37]" />
-                <span>Seoul, Gangnam-gu, Music-ro 123</span>
-              </div>
-              <div className="flex flex-col items-center gap-3">
-                <Instagram size={20} className="text-[#D4AF37]" />
-                <span>@melody_piano_studio</span>
-              </div>
-            </div>
+          <div className="mb-10">
+            <Music2 size={32} strokeWidth={0.5} className="mx-auto mb-6 text-[#D4AF37]" />
+            <h2 className="text-3xl font-serif italic mb-2">Melody Piano</h2>
+            <p className="text-xs uppercase tracking-[0.3em] text-gray-500">Premium Studio</p>
           </div>
-          
-          <div className="border-t border-gray-200 pt-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-light uppercase tracking-widest">
-            <p>&copy; 2024 Melody Piano Academy.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-[#1C1C1C]">Privacy Policy</a>
-              <a href="#" className="hover:text-[#1C1C1C]">Terms of Service</a>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-xs uppercase tracking-widest text-gray-400 mb-16">
+            <span className="hover:text-white cursor-pointer transition-colors">Instagram</span>
+            <span className="hover:text-white cursor-pointer transition-colors">Youtube</span>
+            <span className="hover:text-white cursor-pointer transition-colors">Blog</span>
           </div>
+          <p className="text-[10px] text-gray-600 uppercase tracking-wider">
+            © 2024 Melody Piano Studio. All Rights Reserved.
+          </p>
         </div>
       </footer>
     </div>
-  );
-}
-
-function ArrowLeft({ size }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="19" y1="12" x2="5" y2="12"></line>
-      <polyline points="12 19 5 12 12 5"></polyline>
-    </svg>
-  );
-}
-
-function ArrowRight({ size }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
   );
 }
